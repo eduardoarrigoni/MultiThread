@@ -9,8 +9,8 @@ Este repositório contém um programa em C que demonstra leitura e processamento
 - O código usa mutexes para controlar a alocação de blocos e controle da quantidade de primos encontrados.
 
 **Exemplo 1 de região crítica:**
-
-  pthread_mutex_lock(&mutexMatrizGlobal);
+<pre><code class="language-c">
+pthread_mutex_lock(&mutexMatrizGlobal);
   if (proximoBloco >= quantidadeBlocos) {
       pthread_mutex_unlock(&mutexMatrizGlobal);
       break;
@@ -18,13 +18,16 @@ Este repositório contém um programa em C que demonstra leitura e processamento
   blocoAtual = proximoBloco;
   proximoBloco++;
   pthread_mutex_unlock(&mutexMatrizGlobal);
+</code></pre>
   
 **Exemplo 2 de região crítica:**
-
-  pthread_mutex_lock(&mutexTotalPrimos);
+<pre><code class="language-c">
+pthread_mutex_lock(&mutexTotalPrimos);
+  
   quantidadeTotalPrimos += contador;
+  
   pthread_mutex_unlock(&mutexTotalPrimos);
-
+</code></pre>
   
 ## Testes interessantes
 - Teste com matrizes pequenas e poucas Threads.
