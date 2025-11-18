@@ -1,10 +1,4 @@
-/*
-   Trabalho: Programa Multithread com PThreads
-   Parte: BUSCA SERIAL
 
-   Grupo: Eduardo Souza Arrigoni, Felipe Soeiro Accioly, Isabeli Resende
-
-*/
 #define _CRT_SECURE_NO_WARNINGS 1
 #define _WINSOCK_DEPRECATED_NO_WARNINGS 1
 #pragma comment(lib,"pthreadVC2.lib") // para compatibilidade futura com PThreads
@@ -344,4 +338,5 @@ int main() {
 
     printf("\nFim da execucao.\n");
     return EXIT_SUCCESS;
+
 }
